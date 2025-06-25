@@ -25,9 +25,9 @@ hospital-management-system/
 ## 🛠️ Technologies Used
 
 - PHP
+- XAMPP 
 - MySQL
 - HTML/CSS/JavaScript
-- Bootstrap (optional)
 
 ## 🚀 How to Run Locally
 
@@ -51,12 +51,12 @@ Run the project:
 
 Open the project folder in your local server (e.g. XAMPP/htdocs)
 
-Visit http://localhost/hospital-management-system in your browser
+Visit http://localhost/hospital/login.php in your browser
 
 ## 🔐 Default Login
 
 Role	Username	Password
-Admin	admin	admin123
+Admin	admin	00000000
 
 ## 🤝 Contributing
 Contributions are welcome! Fork the repo and create a pull request.
