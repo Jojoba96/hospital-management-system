@@ -13,8 +13,8 @@ A simple Hospital Management System built with PHP and MySQL, designed to handle
 ## 📂 Project Structure
 
 hospital-management-system/
-## ├── admin/ # Admin dashboard & controls
-## ├── assets/ # CSS, JS, images
+├── admin/ # Admin dashboard & controls
+├── assets/ # CSS, JS, images
 ├── config/ # Database connection
 ├── includes/ # Reusable PHP components (header, footer)
 ├── doctor/ # Doctor-side interface
