@@ -12,7 +12,7 @@ if ( $_SESSION['role_id'] != 1) {
 $sql_roles = "SELECT * FROM roles WHERE id != 1";
 $query_roles = mysqli_query($conn, $sql_roles);
 
-$sql_users = "SELECT * FROM users WHERE role_id != 1 ORDER BY id DESC";
+$sql_users = "SELECT * FROM users WHERE role_id != 1 ORDER BY users.id DESC";
 $query_users = mysqli_query($conn, $sql_users);
 
 if (isset($_POST['register_btn'])) {

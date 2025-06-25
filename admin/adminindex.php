@@ -1,13 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['id'])) {
-    echo "<script>alert('Unauthorized access. Please login.'); window.location.href='../login.php';</script>";
-    exit();
-}
-if ( $_SESSION['role_id'] != 1) {
-    echo "<script>alert('Unauthorized access. Please login.'); window.location.href='../login.php';</script>";
-    exit();
-}
+//if (!isset($_SESSION['id'])) {
+    //echo "<script>alert('Unauthorized access. Please login.'); window.location.href='../login.php';</script>";
+  //  exit();
+//}
+//if ( $_SESSION['role_id'] != 1) {
+  //  echo "<script>alert('Unauthorized access. Please login.'); window.location.href='../login.php';</script>";
+   // exit();
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -9,10 +9,10 @@ if ( $_SESSION['role_id'] != 1) {
     echo "<script>alert('Unauthorized access. Please login.'); window.location.href='../login.php';</script>";
     exit();
 }
-$sql_patients = "SELECT id, age, patient_id FROM patient_histories ORDER BY id DESC ";
+$sql_patients = "SELECT id, age, patient_id FROM patient_histories ORDER BY patient_histories.id DESC";
 $query_patients = mysqli_query($conn, $sql_patients);
 
-$sql_users = "SELECT * FROM users WHERE role_id = 3 ORDER BY id DESC";
+$sql_users = "SELECT * FROM users WHERE role_id = 3 ORDER BY users.id DESC";
 $query_users = mysqli_query($conn, $sql_users);
 
 if (isset($_POST['save_btn'])) {

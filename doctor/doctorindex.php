@@ -65,7 +65,7 @@ $current_date = date('Y-m-d');
 $next_week_date = date('Y-m-d', strtotime('+1 week'));
 
 // Get upcoming sessions
-$sql_upcoming_sessions = "SELECT * FROM appointments WHERE date >= '$current_date' AND date <= '$next_week_date' ORDER BY date, time";
+$sql_upcoming_sessions = "SELECT * FROM appointments WHERE date >= '$current_date' AND date <= '$next_week_date' ORDER BY appointments.date, appointments.time";
 $query_upcoming_sessions = mysqli_query($conn, $sql_upcoming_sessions);
 
 
@@ -208,7 +208,7 @@ $query_upcoming_sessions = mysqli_query($conn, $sql_upcoming_sessions);
     <a href="viewMedicalHistory.php">View Medical History</a>
     <a href="viewPatientProfiles.php">View Patient Profiles</a>
     
-   <!-- <a href="addTask.php">Add Task for Nurses</a> -->
+    <a href="addTask.php">Add Task for Nurses</a> 
     <a href="logout.php">Logout</a>
 </div>
 
@@ -220,13 +220,13 @@ $query_upcoming_sessions = mysqli_query($conn, $sql_upcoming_sessions);
         <h2>Welcome, Dr. <?php echo $name; ?></h2>
         <p>Manage your account and appointments efficiently!</p>
         <img src="../assets/image2.png" alt="Welcome Image" class="img-fluid mb-3" style="width: 90%; max-height: 300px; object-fit: cover;">
-        <!-- <button type="button" class="btn btn-light" data-toggle="modal" data-target="#appointmentsModal" onclick="fetchAppointments()">View My Appointments</button> -->
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#appointmentsModal" onclick="fetchAppointments()">View My Appointments</button> 
         
     </div>
 
 
     <!-- Appointments Modal -->
-<!--<div class="modal fade" id="appointmentsModal" tabindex="-1" aria-labelledby="appointmentsModalLabel" aria-hidden="true">
+<div class="modal fade" id="appointmentsModal" tabindex="-1" aria-labelledby="appointmentsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -254,7 +254,7 @@ $query_upcoming_sessions = mysqli_query($conn, $sql_upcoming_sessions);
             </div>
         </div>
     </div>
-</div> -->
+</div> 
 
 
 

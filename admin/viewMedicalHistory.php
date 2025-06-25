@@ -12,7 +12,7 @@ if ( $_SESSION['role_id'] != 1) {
 $sql_users = "SELECT * FROM users WHERE role_id = 2"; // Doctors
 $query_users = mysqli_query($conn, $sql_users);
 
-$sql_history = "SELECT * FROM medical_histories ORDER by id DESC";
+$sql_history = "SELECT * FROM medical_histories ORDER BY medical_histories.id DESC";
 $query_history = mysqli_query($conn, $sql_history);
 
 if (isset($_POST['save_btn'])) {
