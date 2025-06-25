@@ -39,9 +39,9 @@ Import the database:
 
 Open phpMyAdmin
 
-Create a new database (e.g. hospital_db)
+Create a new database (e.g. hospital)
 
-Import the hospital.sql file (if available)
+Import the hospital.sql (Db must have the same name as project ... to work)
 
 Configure database:
 
