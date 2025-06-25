@@ -35,3 +35,47 @@ hospital-management-system/
 
    ```bash
    git clone https://github.com/Jojoba96/hospital-management-system.git
+Import the database:
+
+Open phpMyAdmin
+
+Create a new database (e.g. hospital_db)
+
+Import the hospital.sql file (if available)
+
+Configure database:
+
+Open /config/db.php and set your MySQL credentials
+
+Run the project:
+
+Open the project folder in your local server (e.g. XAMPP/htdocs)
+
+Visit http://localhost/hospital-management-system in your browser
+
+🔐 Default Login (if applicable)
+Role	Username	Password
+Admin	admin	admin123
+
+🤝 Contributing
+Contributions are welcome! Fork the repo and create a pull request.
+
+📄 License
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+Jojoba96
+
+
+---
+
+Would you like me to:
+
+- Add **screenshots** section?
+- Create a **CONTRIBUTING.md** file?
+- Add a **LICENSE** file?
+- Explain the code or create a video-style walkthrough?
+
+Just say the word!
+
+
