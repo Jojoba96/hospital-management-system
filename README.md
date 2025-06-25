@@ -53,29 +53,22 @@ Open the project folder in your local server (e.g. XAMPP/htdocs)
 
 Visit http://localhost/hospital-management-system in your browser
 
-🔐 Default Login (if applicable)
+## 🔐 Default Login
+
 Role	Username	Password
 Admin	admin	admin123
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome! Fork the repo and create a pull request.
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Jojoba96
 
 
 ---
 
-Would you like me to:
-
-- Add **screenshots** section?
-- Create a **CONTRIBUTING.md** file?
-- Add a **LICENSE** file?
-- Explain the code or create a video-style walkthrough?
-
-Just say the word!
 
 
