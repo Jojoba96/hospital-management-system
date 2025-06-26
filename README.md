@@ -79,11 +79,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## 📄 License
 This project is for educational purposes only.
 =======
-A simple Hospital Management System built with PHP and MySQL, designed to handle basic patient, doctor, and appointment records through a web interface.
 
-
-## 🤝 Contributing
-Contributions are welcome! Fork the repo and create a pull request.
 
 ## 👨‍💻 Author
 Jojoba96
