@@ -10,7 +10,7 @@ if ( $_SESSION['role_id'] != 2) {
     exit();
 }
 $id = $_SESSION['id'];
-$sql_tasks = "SELECT * FROM tasks WHERE doctor_id = $id";
+$sql_tasks = "SELECT * FROM tasks WHERE tasks.doctor_id = $id";
 $query_tasks = mysqli_query($conn, $sql_tasks);
 ?>
 <!DOCTYPE html>
@@ -135,13 +135,13 @@ $query_tasks = mysqli_query($conn, $sql_tasks);
                 <?php
                 foreach ($query_tasks as $row_task) {
                     $patient_id = $row_task['patient_id'];
-                    $sql_patient = "SELECT * FROM users WHERE id = $patient_id";
+                    $sql_patient = "SELECT * FROM users WHERE users.id = $patient_id";
                     $query_patient = mysqli_query($conn, $sql_patient);    
                     foreach ($query_patient as $row_patient) {
                         $patient_name = $row_patient['name'];
                     }
                     $nurse_id = $row_task['nurse_id'];
-                    $sql_nurse = "SELECT * FROM users WHERE id = $nurse_id";
+                    $sql_nurse = "SELECT * FROM users WHERE users.id = $nurse_id";
                     $query_nurse = mysqli_query($conn, $sql_nurse);    
                     foreach ($query_nurse as $row_nurse) {
                         $nurse_name = $row_nurse['name'];

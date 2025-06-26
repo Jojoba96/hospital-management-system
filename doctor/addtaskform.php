@@ -10,22 +10,26 @@ if ( $_SESSION['role_id'] != 2) {
     exit();
 }
 $id = $_SESSION['id'];
-$sql_patients = "SELECT * FROM users WHERE role_id = 3";
+$sql_patients = "SELECT * FROM users WHERE users.role_id = 3";
 $query_patients = mysqli_query($conn, $sql_patients);
-$sql_nurses = "SELECT * FROM users WHERE role_id = 4";
+$sql_nurses = "SELECT * FROM users WHERE users.role_id = 4";
 $query_nurses = mysqli_query($conn, $sql_nurses);
 
 if (isset($_POST['save_btn'])) {
-    $patient = $_POST['patient'];
-    $nurse = $_POST['nurse'];
-    $name = $_POST['name'];
-    $time = $_POST['time'];
-    $frequent = $_POST['frequent'];
-    $sql_insert = "INSERT INTO tasks(`doctor_id`, `nurse_id`, `patient_id`, `name`, `time`, `frequent`) VALUES('$id','$nurse','$patient','$name','$time','$frequent')";
-    if ($query_insert = mysqli_query($conn, $sql_insert)) {
+    $patient = mysqli_real_escape_string($conn, $_POST['patient']);
+    $nurse = mysqli_real_escape_string($conn, $_POST['nurse']);
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $time = mysqli_real_escape_string($conn, $_POST['time']);
+    $frequent = mysqli_real_escape_string($conn, $_POST['frequent']);
+    $sql_insert = "INSERT INTO tasks(`doctor_id`, `nurse_id`, `patient_id`, `name`, `time`, `frequent`) VALUES(?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql_insert);
+    mysqli_stmt_bind_param($stmt, 'iiisss', $id, $nurse, $patient, $name, $time, $frequent);
+    if (mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_close($stmt);
         header("location:addTask.php");
     } else {
         echo "<script>alert('Failed to add task')</script>";
+        mysqli_stmt_close($stmt);
     }
 }
 ?>
